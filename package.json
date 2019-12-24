@@ -1,0 +1,32 @@
+{
+  "name": "rz-koa-cli",
+  "version": "1.0.0",
+  "description": "基于 koa node 接口 服务 cli框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roc-zhou/rz-koa-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roc-zhou/rz-koa-cli/issues"
+  },
+  "homepage": "https://github.com/Roc-zhou/rz-koa-cli#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "figlet": "^1.2.4",
+    "inquirer": "^7.0.1",
+    "minimist": "^1.2.0",
+    "touch": "^3.1.0"
+  },
+  "bin": {
+    "rz-koa-cli": "./index.js"
+  }
+}
