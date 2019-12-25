@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Roc-zhou/rz-koa-cli.git"
   },
-  "keywords": [],
+  "keywords": ["koa", "koa-templete", "rz"],
   "author": "",
   "license": "ISC",
   "bugs": {
