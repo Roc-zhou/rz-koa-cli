@@ -36,20 +36,15 @@ const run = async () => {
     }
     //continue
     const pa = path.resolve(process.cwd(), './', credentials.folderName)
-    // console.log(pa);
-
     const init = spawn(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['init', '-y'], {
       cwd: pa
     })
-    init.stdout.on('data', function (data) {
-
-    })
-    init.stderr.on('data', function (data) {
-
-    })
+    init.stdout.on('data', (data) => { })
+    init.stderr.on('data', (data) => { })
     init.on('close', async cod => {
       if (cod !== 0) {
         console.log(cod);
+        return
       }
 
       await install(pa, 'koa')
@@ -58,12 +53,11 @@ const run = async () => {
       await install(pa, 'koa-bodyparser')
       await install(pa, 'moment')
       await install(pa, 'koa-json')
-      
+
       for (const x of credentials.select) {
         await install(pa, x)
       }
 
-      clear();
       process.stdout.write('\n');
       console.log(`    you can cd ${credentials.folderName}`);
       process.exit(0);
