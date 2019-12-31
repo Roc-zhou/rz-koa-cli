@@ -7,6 +7,8 @@ const bodyparser = require('koa-bodyparser')
 const Moment = require("moment")
 const json = require('koa-json');
 
+const { port } = require('./config/index')
+
 // use json
 app.use(json())
 
@@ -21,4 +23,4 @@ app
   .use(require('./routers/index').routes())
   .use(router.allowedMethods())
 
-app.listen(3000, () => console.log('server run 3000'))
+app.listen(port, () => console.log(`server run ${port}`))
