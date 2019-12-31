@@ -28,7 +28,7 @@ const run = async () => {
   try {
     const isHave = await exists(credentials.folderName)
   } catch (error) {
-    mkdir(`./${credentials.folderName}`)
+    mkdir(path.resolve(process.cwd(), './', credentials.folderName))
   }
   copyFolder(path.join(__dirname + '/templates'), path.resolve(process.cwd(), './', credentials.folderName), function (err) {
     if (err) {

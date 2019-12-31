@@ -1,6 +1,6 @@
 {
   "name": "rz-koa-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "基于 koa node 接口 服务 cli框架",
   "main": "index.js",
   "scripts": {
