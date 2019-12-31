@@ -54,10 +54,9 @@ const run = async () => {
       await install(pa, 'moment')
       await install(pa, 'koa-json')
 
-      for (const x of credentials.select) {
-        await install(pa, x)
+      if (credentials.select.length !== 0) {
+        for (const x of credentials.select) await install(pa, x)
       }
-
       process.stdout.write('\n');
       console.log(`    you can cd ${credentials.folderName}`);
       process.exit(0);
